@@ -12,9 +12,22 @@
 | **Statistik** | Läufe, SAT-Daten, Preis-Tracker, Export und Import |
 | **Kalibrierung** | Messung per numpy, Assistenten |
 | **Konfiguration** | Item-Definitionen, Einstellungsdatei (kompatibel zur AutoHotkey-Version), Katalog |
+| **Pico-Einrichtung** | Firmware schreiben, Laufwerk erkennen, Einrichtungsfenster |
+| **Eingabe-Backend** | Abstraktionsschicht für Tastatur- und Mauseingaben (hwinput) |
 | **Tests** | Unit-Tests für Engine, Statistik, Kalibrierung und Launcher |
 
 Die Oberfläche ist in der Python-Version eine schlichte Tk-Oberfläche. Das Bild-Overlay der AutoHotkey-Version wird dort nicht verwendet.
+
+## Eingabe-Backends (hwinput)
+
+Je nach gewählter Programmvariante sendet das Programm die Eingaben auf unterschiedlichem Weg:
+
+| Variante | Backend | Beschreibung |
+|---|---|---|
+| Classic | Windows SendInput | Windows-API, direkt an das Betriebssystem |
+| Safe | Pico (USB-HID) | Über den Raspberry Pi Pico, der als echtes HID-Gerät erscheint |
+
+Ein früherer Kernel-Treiber (Virtual HID Framework) wurde entfernt. Der Pico ersetzt ihn vollständig. Einrichtung: [Safe-Modus](safe-modus.md).
 
 ## Classic (AutoHotkey)
 
@@ -25,6 +38,8 @@ Das ursprüngliche Programm in einer Datei mit mehreren Bibliotheken (Kalibrieru
 ```
 current\
 ├─ app\          Python-Quellcode (Programm und Launcher), Tests, Assets
+│   ├─ hwinput\  Eingabe-Bibliothek (Backends: Pico, SendInput)
+│   └─ pico_uf2\ CircuitPython-Firmware für Pico und Pico 2
 ├─ classic\      Classic-Modus (AutoHotkey)
 ├─ admin\        nur für den Autor: Lizenzen und Releases
 ├─ userversion\  fertige Kunden-Dateien und Build

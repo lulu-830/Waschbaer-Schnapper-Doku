@@ -16,6 +16,7 @@
 | [docs/einstellungen.md](docs/einstellungen.md) | Einstellungsfenster, Optionen, Auflösung |
 | [docs/kalibrierung.md](docs/kalibrierung.md) | Kalibrierung per Screenshot |
 | [docs/statistik.md](docs/statistik.md) | Statistik, SAT-Anbindung, Preis-Tracker, Export |
+| [docs/safe-modus.md](docs/safe-modus.md) | Safe-Modus einrichten (Raspberry Pi Pico) |
 | [docs/nachtwache.md](docs/nachtwache.md) | Nachtwache (F9) im Classic-Modus |
 | [docs/launcher-und-updates.md](docs/launcher-und-updates.md) | Launcher, Lizenzprüfung, Auto-Update |
 | [docs/architektur.md](docs/architektur.md) | Aufbau der Programmteile und Ordnerstruktur |
