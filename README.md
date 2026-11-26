@@ -1,5 +1,7 @@
 # Waschbär Schnapper – Dokumentation
 
+<img src="bilder/logo.png" width="120" alt="Logo">
+
 Dokumentation zu einem **Windows-Programm für den Marktplatz in Albion Online**. Es automatisiert wiederkehrende Klickfolgen beim Einstellen von Kauf- und Verkaufsaufträgen und wertet die Ergebnisse aus. Dieses Repository enthält **nur die Beschreibung**: keinen Quellcode, keine Lizenzlogik, keine Programmdateien.
 
 > Die Software steht unter einer eigenen, restriktiven Lizenz („Alle Rechte vorbehalten, nur private Nutzung“). Diese Dokumentation beschreibt sie nur.
@@ -14,7 +16,9 @@ Dokumentation zu einem **Windows-Programm für den Marktplatz in Albion Online**
 
 ## Überblick
 
-![Entwicklungsstufen](bilder/entwicklung.png)
+![Hauptfenster des Programms](bilder/hauptfenster.png)
+
+![Entwicklungsstufen (Schema)](bilder/entwicklung.png)
 
 ## Funktionen
 
