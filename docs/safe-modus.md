@@ -1,5 +1,7 @@
 # Safe-Modus
 
+![Safe-Modus: Weg einer Eingabe](../bilder/safe-modus-weg.png)
+
 Der Safe-Modus ist die Python-Variante des Programms. Statt die Eingaben direkt über Windows zu senden, laufen sie über einen Raspberry Pi Pico, der am PC als echte USB-Tastatur und -Maus erscheint.
 
 ## Was das bedeutet
@@ -29,6 +31,10 @@ Das Einrichtungsfenster öffnet sich automatisch, wenn der Safe-Modus gestartet 
 | Nachtwache (F9) | ja | nein |
 | Treiber nötig | nein | nein |
 | Zusatz-Hardware | keine | Raspberry Pi Pico |
+
+## Mehr dazu
+
+Wie die Eingaben technisch an den Pico gehen, beschreibt die Seite [hwinput](hwinput.md).
 
 ## Hinweise
 

@@ -27,7 +27,7 @@ Je nach gewählter Programmvariante sendet das Programm die Eingaben auf untersc
 | Classic | Windows SendInput | Windows-API, direkt an das Betriebssystem |
 | Safe | Pico (USB-HID) | Über den Raspberry Pi Pico, der als echtes HID-Gerät erscheint |
 
-Ein früherer Kernel-Treiber (Virtual HID Framework) wurde entfernt. Der Pico ersetzt ihn vollständig. Einrichtung: [Safe-Modus](safe-modus.md).
+Ein früherer Kernel-Treiber (Virtual HID Framework) wurde entfernt. Der Pico ersetzt ihn vollständig. Einrichtung: [Safe-Modus](safe-modus.md). Technische Details: [hwinput](hwinput.md).
 
 ## Classic (AutoHotkey)
 
