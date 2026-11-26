@@ -47,7 +47,4 @@ Das Projekt begann als AutoHotkey-Skript (Version 1.0, Buy-Order-Automat) und wu
 - Optional: das Statistics Analysis Tool (SAT) für Handelsdaten
 - Internetverbindung für die Lizenzprüfung (siehe [Launcher und Updates](docs/launcher-und-updates.md))
 
-## Wichtige Hinweise
 
-- **Nutzungsbedingungen prüfen.** Das Programm klickt selbstständig im Spiel. Ob das erlaubt ist, regeln die Bedingungen von Albion Online. Die Programmlizenz schließt eine Haftung für Kontosperren aus.
-- **Zugangsdaten gehören nicht in ein Repository.** Lizenzschlüssel, Tokens und Admin-Dateien werden nicht veröffentlicht.
