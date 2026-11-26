@@ -1,49 +1,51 @@
+<p align="center"><img src="bilder/logo.png" width="130" alt="Waschbär Schnapper Logo"></p>
+
 # Waschbär Schnapper – Dokumentation
 
-<img src="bilder/logo.png" width="120" alt="Logo">
+**Windows-Programm für den Marktplatz in Albion Online.** Es automatisiert wiederkehrende Klickfolgen beim Einstellen von Kaufaufträgen (Buy Orders) und beim Verkaufen, liest Ergebnisse aus und führt Buch über Käufe, Verkäufe und Gewinn.
 
-Dokumentation zu einem **Windows-Programm für den Marktplatz in Albion Online**. Es automatisiert wiederkehrende Klickfolgen beim Einstellen von Kauf- und Verkaufsaufträgen und wertet die Ergebnisse aus. Dieses Repository enthält **nur die Beschreibung**: keinen Quellcode, keine Lizenzlogik, keine Programmdateien.
+> Dieses Repository enthält **nur Dokumentation**: keinen Quellcode, keine Programmdateien, keine Lizenzlogik. Die Software steht unter einer eigenen Lizenz („Alle Rechte vorbehalten, nur private Nutzung“).
 
-> Die Software steht unter einer eigenen, restriktiven Lizenz („Alle Rechte vorbehalten, nur private Nutzung“). Diese Dokumentation beschreibt sie nur.
+![Hauptfenster](bilder/hauptfenster.png)
+
+## Inhalt
+
+| Seite | Thema |
+|---|---|
+| [docs/funktionen.md](docs/funktionen.md) | Alle Funktionen und Hotkeys im Detail |
+| [docs/einstellungen.md](docs/einstellungen.md) | Einstellungsfenster, Optionen, Auflösung |
+| [docs/kalibrierung.md](docs/kalibrierung.md) | Kalibrierung per Screenshot |
+| [docs/statistik.md](docs/statistik.md) | Statistik, SAT-Anbindung, Preis-Tracker, Export |
+| [docs/nachtwache.md](docs/nachtwache.md) | Nachtwache (F9) im Classic-Modus |
+| [docs/launcher-und-updates.md](docs/launcher-und-updates.md) | Launcher, Lizenzprüfung, Auto-Update |
+| [docs/architektur.md](docs/architektur.md) | Aufbau der Programmteile und Ordnerstruktur |
+| [docs/versionsverlauf.md](docs/versionsverlauf.md) | Vollständiger Versionsverlauf 1.0 bis 3.6 |
+| [docs/fehlerbehebung.md](docs/fehlerbehebung.md) | Häufige Probleme |
+
+## Auf einen Blick
+
+- **Kaufen (F1):** Buy Orders für gewählte Waffen, Rüstungsteile, Taschen und Umhänge, gefiltert nach Tier (1 bis 8) und Verzauberung (.0 bis .4).
+- **Beute verscherbeln (F6)** und **Schnapp-Kreislauf (F7):** Verkaufen und neu einstellen, mit einstellbarer Zahl an Durchläufen.
+- **Post-Wühler (F8):** liest Mails im Postfach und löscht sie.
+- **Nachtwache (F9, nur Classic):** holt fertige Verkäufe ab und stellt Items neu ein.
+- **Statistik (F5):** sechs Tabs mit Wühlkasse, Chroniken, Revierkarte, Beute-Charts und Updatelog.
+- **Kalibrierung:** Auflösung und UI-Skalierung werden aus Screenshots ermittelt.
+- **Launcher:** Lizenz, Programmvariante, Online-Prüfung und automatisches Update.
 
 ## Entwicklung in Stufen
 
-| Version | Stand |
-|---|---|
-| 1.0 bis 1.6 | AutoHotkey-Skript: Buy-Order-Automat mit Kategorien, Tiers und Verzauberungen, Statistik, Bildoberfläche, Preis-Tracker |
-| 1.7 bis 2.x | Anbindung an das Statistics Analysis Tool (SAT), Revierkarte aus Spiel-Mails, Post-Wühler, Online-Lizenzprüfung, Auto-Update über GitHub, Kalibrierung per Screenshot |
-| 2.9 bis 3.6 | Taschen und Umhänge im Kauf-Makro, komplett neu in Python mit Launcher und zwei Modi, „Nachtwache“ per Windows-OCR |
+![Versionsstufen](bilder/versionen.png)
 
-## Überblick
+Das Projekt begann als AutoHotkey-Skript (Version 1.0, Buy-Order-Automat) und wuchs über Statistik, Design, Preis-Tracker, SAT-Anbindung, Lizenz und Auto-Update. Mit Version 3.0 wurde es komplett in Python neu geschrieben. Der Classic-Modus mit dem ursprünglichen AutoHotkey-Programm blieb erhalten, weil die Nachtwache dort läuft. Details stehen im [Versionsverlauf](docs/versionsverlauf.md).
 
-![Hauptfenster des Programms](bilder/hauptfenster.png)
+## Systemvoraussetzungen
 
-![Entwicklungsstufen (Schema)](bilder/entwicklung.png)
+- Windows mit Albion Online
+- Bildschirmauflösung und Windows-Skalierung, die die Kalibrierung unterstützt (siehe [Kalibrierung](docs/kalibrierung.md))
+- Optional: das Statistics Analysis Tool (SAT) für Handelsdaten
+- Internetverbindung für die Lizenzprüfung (siehe [Launcher und Updates](docs/launcher-und-updates.md))
 
-## Funktionen
+## Wichtige Hinweise
 
-- **Kaufen:** Buy Orders für ausgewählte Kategorien, Tiers und Verzauberungen, inklusive Taschen und Umhängen
-- **Beute verscherbeln (F6)** und **Schnapp-Kreislauf (F7):** Verkaufs- und Neueinstellungsabläufe mit einstellbaren Durchläufen
-- **Post-Wühler (F8):** arbeitet Mails im Postfach ab
-- **Nachtwache (F9, nur Classic):** holt in einstellbaren Zyklen fertige Verkäufe ab, erstellt Buy Orders und stellt Items neu ein; bei Preis 0 wird der Durchschnitt aus der 4-Wochen-Historie eingetragen
-- **Pause/Fortsetzen (F2), Stopp (F3), Einstellungen (F4), Statistik (F5)**
-- **Statistik** mit mehreren Tabs: Wühlkasse, Verscherbel-Chronik, Kreislauf-Kapriolen, Revierkarte, Beute-Charts, Updatelog. Export und Import als Textdatei, Mail-Archiv als CSV.
-- **Preis-Tracker:** höchste Buy-Order-Preise nach jedem Lauf, Silbersumme, Preise aus SAT oder Data Project
-- **Kalibrierung per Screenshot:** Auflösung und UI-Skalierung werden aus Beispielbildern erkannt, statt manuell gewählt
-- **Laufzeitschätzung** vor dem Start aus gemessenen Zeiten
-
-## Programmteile (Version 3)
-
-- **Launcher:** Startbildschirm mit Modusauswahl, Lizenzanmeldung per Geräte-ID, Versionsprüfung, automatischem Update mit Prüfsumme und Pflicht-Updates
-- **Classic-Modus:** das ursprüngliche AutoHotkey-Programm als EXE
-- **Python-Modus:** Neuimplementierung mit Oberfläche, Engine, Statistik und Kalibrierung, samt Unit-Tests
-- **Admin-Panel** (nur für den Autor): Lizenzverwaltung und Veröffentlichen von Releases
-
-## Voraussetzungen
-
-Windows, Albion Online, optional das SAT-Tool für Handelsdaten. Die Oberfläche passt sich der Windows-Skalierung an.
-
-## Hinweise
-
-- Das Programm klickt selbstständig im Spiel. Prüfe vor der Nutzung, ob die Nutzungsbedingungen von Albion Online das erlauben. Die Lizenz des Programms schließt eine Haftung für Kontosperren aus.
-- Zugangsdaten, Lizenzschlüssel und Tokens gehören nie in ein Repository.
+- **Nutzungsbedingungen prüfen.** Das Programm klickt selbstständig im Spiel. Ob das erlaubt ist, regeln die Bedingungen von Albion Online. Die Programmlizenz schließt eine Haftung für Kontosperren aus.
+- **Zugangsdaten gehören nicht in ein Repository.** Lizenzschlüssel, Tokens und Admin-Dateien werden nicht veröffentlicht.
