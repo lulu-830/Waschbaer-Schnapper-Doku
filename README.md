@@ -12,6 +12,10 @@ Dokumentation zu einem **Windows-Programm für den Marktplatz in Albion Online**
 | 1.7 bis 2.x | Anbindung an das Statistics Analysis Tool (SAT), Revierkarte aus Spiel-Mails, Post-Wühler, Online-Lizenzprüfung, Auto-Update über GitHub, Kalibrierung per Screenshot |
 | 2.9 bis 3.6 | Taschen und Umhänge im Kauf-Makro, komplett neu in Python mit Launcher und zwei Modi, „Nachtwache“ per Windows-OCR |
 
+## Überblick
+
+![Entwicklungsstufen](bilder/entwicklung.png)
+
 ## Funktionen
 
 - **Kaufen:** Buy Orders für ausgewählte Kategorien, Tiers und Verzauberungen, inklusive Taschen und Umhängen
